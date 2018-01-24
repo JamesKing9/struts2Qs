@@ -11,7 +11,7 @@
     
     <!-- 所有的Action定义都应该放在package下 -->	
     <package name="crazyit" namespace="/" extends="struts-default">
-        <action name="login" class="om.cheng.struts2qs.actions.LoginAction">
+        <action name="login" class="com.cheng.struts2qs.actions.LoginAction">
             <!-- 定义三个逻辑视图和物理资源之间的映射 -->
             <result name="error">/WEB-INF/content/error.jsp</result>
             <result name="success">/WEB-INF/content/welcome.jsp</result>

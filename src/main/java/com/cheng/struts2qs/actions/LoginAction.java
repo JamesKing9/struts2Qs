@@ -47,8 +47,8 @@ public class LoginAction extends ActionSupport {
     // 定义处理用户请求的execute方法
     @Override
     public String execute() throws Exception {
-        // 当username为crazyit.org，password为leegang时即登录成功
-        if (getUsername().equals("crazyit.org") && getPassword().equals("leegang")) {
+        // 当username为 cheng，password为123时即登录成功
+        if (getUsername().equals("cheng") && getPassword().equals("123")) {
             ActionContext.getContext().getSession().put("user", getUsername());
             return SUCCESS;
         }

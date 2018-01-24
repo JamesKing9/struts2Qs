@@ -11,15 +11,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title><s:text name="loginPage"></title>
-        </head>
-        <body>
+        <title><s:text name="loginPage"/></title>
+    </head>
+    <body>
 
-            <s:form action="login">
-                <s:textfield name="username" key="user"/>
-                <s:textfield name="password" key="pass"/>
-                <s:submit key="login"/>
-            </s:form>
+        <s:form action="login">
+            <s:textfield name="username" key="user"/>
+            <s:textfield name="password" key="pass"/>
+            <s:submit key="login"/>
+        </s:form>
 
-        </body>
-    </html>
+    </body>
+</html>
