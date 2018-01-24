@@ -23,8 +23,8 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author james
  */
 public class LoginAction extends ActionSupport {
+    
     // 定义封装请求参数的username和password成员变量
-
     private String username;
     private String password;
 
@@ -47,9 +47,19 @@ public class LoginAction extends ActionSupport {
     // 定义处理用户请求的execute方法
     @Override
     public String execute() throws Exception {
+        
+        /** username */
+        String user_name; 
+        user_name = getUsername();
+        /** password */
+        String pwd;
+        pwd = getPassword();
+        
         // 当username为 cheng，password为123时即登录成功
-        if (getUsername().equals("cheng") && getPassword().equals("123")) {
-            ActionContext.getContext().getSession().put("user", getUsername());
+        if (user_name.equals("cheng") && pwd.equals("123")) {
+            
+            // 将 user_name 放到 session 中，以便 welcome.jsp 中的使用，使用‘user’作为存取的key
+            ActionContext.getContext().getSession().put("user", user_name);
             return SUCCESS;
         }
         return ERROR;
